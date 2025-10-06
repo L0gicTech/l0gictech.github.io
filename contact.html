@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - IT-Разработчики Сатка</title>
+    <meta name="description" content="Свяжитесь с командой IT-Разработчики из Сатки для обсуждения вашего проекта">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" class="logo-img" alt="IT-Разработчики Сатка">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="burger-menu">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-nav">
+        <button class="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Свяжитесь с нами</h1>
+            <p>Готовы обсудить ваш проект или присоединиться к нашей команде?</p>
+        </div>
+    </section>
+
+    <section class="contact">
+        <div class="container">
+            <div class="contact-content">                
+                <div class="contact-info">
+                    <h2>Наши контакты</h2>
+                    <p>Мы всегда открыты для новых идей и сотрудничества. Свяжитесь с нами любым удобным способом.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item fade-in">
+                            <h3>Адрес</h3>
+                            <p>IT-Cube Сатка</p>
+                            <a href="https://yandex.ru/maps/-/CLeXfA6t" target="_blank" aria-label="г. Сатка, Солнечная улица, 32">г. Сатка, Солнечная улица, 32</a>
+                        </div>
+                        
+                        <div class="contact-item fade-in">
+                            <h3>Телефон</h3>
+                            <a href="tel:+79227130983" class="link_phone_top">+7(922) 713-09-83</a> 
+                        </div>
+                        
+                        <div class="contact-item fade-in">
+                            <h3>Email</h3>
+                            <a href="mailto:logictech-sup@ya.ru">logictech-sup@ya.ru</a>
+                        </div>
+                        
+                        <div class="contact-item fade-in">
+                            <h3>Социальные сети</h3>
+                            <div class="social-links">
+                                <a href="https://vk.com/id1" target="_blank" aria-label="ВКонтакте">VK</a>
+                                <a href="https://t.me/LogicTechSupBot" target="_blank" aria-label="Telegram">Telegram</a>
+                                <a href="https://github.com/read-file-python" target="_blank" aria-label="GitHub">GitHub</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form fade-in">
+                    <h2>Отправить сообщение</h2>
+                    <form id="contactForm" onsubmit="return sendEmail(this)">
+                        <label for="name">Имя *</label>
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder="Введите ваше имя">
+                        </div>
+                        <label for="email">Email *</label>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Введите ваш email">
+                        </div>
+                        <label for="phone">Телефон</label>
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Тема сообщения</label>
+                            <select id="subject" name="subject">
+                                <option value="Сотрудничество">Сотрудничество</option>
+                                <option value="Проект">Обсуждение проекта</option>
+                                <option value="Стажировка">Стажировка/Работа</option>
+                                <option value="Вопрос">Вопрос</option>
+                                <option value="Другое">Другое</option>
+                            </select>
+                        </div>
+                        <label for="message">Сообщение *</label>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder="Расскажите о вашем проекте или задайте вопрос..." rows="5"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <small>* Обязательные поля</small>
+                        </div>
+                        <button type="submit" class="btn">
+                            <span class="btn-text">Отправить сообщение</span>
+                            <span class="btn-loading" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Отправка...
+                            </span>
+                        </button>
+                    </form>
+                    <div id="formMessage" style="display: none; margin-top: 1rem; padding: 1rem; border-radius: 5px;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <h2 class="section-title">Как нас найти</h2>
+            <div class="map-placeholder fade-in">
+                <div style="background: var(--card-bg); padding: 2rem; text-align: center; border-radius: 10px; box-shadow: var(--shadow);">
+                    <h3>Карта расположения IT-Cube Сатка</h3>
+                    <p>г. Сатка, ул. Солнечная, 32</p>
+                    <div style="position:relative;overflow:hidden; border-radius: 8px; margin-top: 1rem;">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=58.973556%2C55.035933&mode=poi&poi%5Bpoint%5D=58.972863%2C55.036154&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D94460947584&z=19.19" width="100%" height="400" frameborder="0" allowfullscreen="true" style="position:relative; border-radius: 8px;">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-extra-info">
+                <div class="info-card fade-in">
+                    <i class="fas fa-clock"></i>
+                    <h3>Время работы</h3>
+                    <p>Пн-Пт: 9:00 - 18:00</p>
+                    <p>Сб: 10:00 - 16:00</p>
+                    <p>Вс: Выходной</p>
+                </div>
+                <div class="info-card fade-in">
+                    <i class="fas fa-rocket"></i>
+                    <h3>Быстрый ответ</h3>
+                    <p>Отвечаем на сообщения в течение 2 часов в рабочее время</p>
+                </div>
+                <div class="info-card fade-in">
+                    <i class="fas fa-users"></i>
+                    <h3>Присоединяйтесь</h3>
+                    <p>Ищете стажировку или хотите стать частью команды? Пишите нам!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">        
+                <div class="social-links">
+                    <a href="#" aria-label="ВКонтакте">VK</a>
+                    <a href="https://t.me/LogicTechSupBot" target="_blank" aria-label="Telegram">Telegram</a>
+                    <a href="https://github.com/l0gictech" target="_blank" aria-label="GitHub">GitHub</a>
+                </div>
+                
+                <div class="copyright">
+                    <p>&copy; 2025 IT-Разработчики Сатка. Все права защищены.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/contact.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/back-to-top.js"></script> 
+</body>
+
+</html>
+
+

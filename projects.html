@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проекты - IT-Разработчики Сатка</title>
+    <meta name="description" content="Реализованные и текущие проекты команды IT-Разработчики Сатка">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="img/logo.png" class="logo-img" alt="IT-Разработчики Сатка">
+                    </a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="projects.html">Проекты</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="burger-menu">
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                    <div class="burger-line"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="mobile-nav">
+        <button class="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="about.html">О нас</a></li>
+            <li><a href="projects.html">Проекты</a></li>
+            <li><a href="contact.html">Контакты</a></li>
+        </ul>
+    </div>
+
+    <section class="page-hero">
+        <div class="container">
+            <h1>Наши проекты</h1>
+            <p>Реализованные и текущие работы нашей команды</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <img src="img/rasspis.png" alt="ТГ" class="project-img">
+                    <div class="project-info">
+                        <h3>Расписание IT-Cube</h3>
+                        <p>Бот в телеграмм с помощью которого можно будет узнать про расписание занятий и в какой ты группе.</p>
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <img src="img/mem.png" alt="Сайт по кибербезопасности " class="project-img">
+                    <div class="project-info">
+                        <h3>Кибербезопасность</h3>
+                        <p>Сайт на котором люди всех возрастов могут обучаться защищать свои данные от злоумышленников.</p>
+                        <div class="project-tags">
+                            <span class="tag">Django</span>
+                            <span class="tag">Html</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card fade-in">
+                    <img src="img/muzei.png" alt="Сайт музея Магнезит" class="project-img">
+                    <div class="project-info">
+                        <h3>Музей "Магнезит"</h3>
+                        <p>Комплексная система управления устройствами умного дома с поддержкой голосового управления и сценариев автоматизации.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Заинтересованы в сотрудничестве?</h2>
+            <p>Мы всегда открыты для обсуждения новых проектов и идей</p>
+            <a href="contact.html" class="btn">Связаться с нами</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="#" aria-label="ВКонтакте">VK</a>
+                    <a href="https://t.me/LogicTechSupBot" target="_blank" aria-label="Telegram">Telegram</a>
+                    <a href="#" aria-label="GitHub">GitHub</a>
+                </div>
+                <p>&copy; 2025 IT-Разработчики Сатка. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/theme.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/back-to-top.js"></script> 
+</body>
+
+</html>
